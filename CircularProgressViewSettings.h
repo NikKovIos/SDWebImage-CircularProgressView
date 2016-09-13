@@ -8,14 +8,24 @@
 
 @interface CircularProgressViewSettings : NSObject
 
-@property(nonatomic, strong) UIColor *trackTintColor;
-@property(nonatomic, strong) UIColor *progressTintColor;
-@property(nonatomic, strong) UIColor *innerTintColor;
-@property(nonatomic) NSInteger roundedCorners;
-@property(nonatomic) CGFloat thicknessRatio;
-@property(nonatomic) NSInteger clockwiseProgress;
-@property(nonatomic) CGFloat progress;
-@property(nonatomic) CGFloat indeterminateDuration;
-@property(nonatomic) NSInteger indeterminate;
+/// Color of background of a track
+@property (nonatomic, strong) UIColor *trackTintColor;
+/// Color of circle, that filling track
+@property (nonatomic, strong) UIColor *progressTintColor;
+/// Color of circle inside the progress view
+@property (nonatomic, strong) UIColor *innerTintColor;
+/// Rounded corner of progress. On/Off. Between 0 and 1.
+@property (nonatomic) NSInteger roundedCorners;
+/// Thickness of progress
+@property (nonatomic) CGFloat thicknessRatio;
+/// Сounterclockwise or clockwise filling. On/Off. Between 0 and 1.
+@property (nonatomic) NSInteger clockwiseProgress;
+/// Progress state
+@property (nonatomic) CGFloat progress;
+
+/// If you don't know the size of data. Speed.
+@property (nonatomic) CGFloat indeterminateDuration;
+/// If you don't know the size of data. On/Off. Between 0 and 1.
+@property (nonatomic) NSInteger indeterminate;
 
 @end

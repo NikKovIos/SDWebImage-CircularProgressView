@@ -94,13 +94,7 @@ id <ProgressViewDataSource> dataSource;
                 }
             }
         }
-        else
-        {
-            circularProgressView.thicknessRatio = 0.15f;
-            circularProgressView.trackTintColor = [UIColor colorWithRed:0.083 green:0.842 blue:1.000 alpha:1.000];
-            circularProgressView.innerTintColor = [UIColor colorWithRed:0.047 green:0.159 blue:0.281 alpha:1.000];
-        }
-        
+    
         [self addSubview:circularProgressView];
     }
 }
@@ -172,7 +166,7 @@ id <ProgressViewDataSource> dataSource;
             break;
         }
     }
-    
+
     __weak typeof(self) weakSelf = self;
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
