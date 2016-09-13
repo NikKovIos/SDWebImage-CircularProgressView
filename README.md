@@ -65,6 +65,7 @@ If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call
 ```
 ##You should know
 - It uses SDWebImage and DACircularProgress.
+- CirclePV type implements transparent view by default. Use appearance in AppDelegate or somewhere else to customize it.
 - Custom progress bar is a priority for other types. Otherwords if you choose `LinearPV` and then add `orCustomProgressView:(UIProgressView*)yourCustomProgressView` than it would be your custom ProgressView.
 
 ### References
@@ -76,3 +77,4 @@ Inspired by projects:
 #### TODO:
 - [ ] Add http://shields.io/
 - [ ] Add UIedgeInsets like property
+- [ ] Think about default settings for CircleV
