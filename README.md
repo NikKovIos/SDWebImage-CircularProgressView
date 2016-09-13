@@ -2,11 +2,14 @@
 ###by Nik Kov
 
  
-Good day everybody!)
-This is a category to SDWebImage that offer you to implement ProgressView in three ways:
+Good day everybody!)  
+
+This is a category to SDWebImage that offer you to add ProgressView in three ways:
 - Circular (using [DACircularProgress](https://github.com/danielamitay/DACircularProgress))
 - Linear
-- Custom
+- Custom  
+
+Images are downloaded using SDWebImage (3.7.0 and up)
 
 ## SCREENSHOTS
 
@@ -39,11 +42,11 @@ If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call
 ```
 
 #### Customize UIProgressView by DataSource methods
-- 1. `#import "UIImageView+CircularProgressView.h"`
-- 2. `@interface NKVTableCell () <ProgressViewDataSource>`
-- 3. `[self.bodyImageV nkvSetProgressViewDataSource:self];`
-- 4. `[self.bodyImageV nkv_setImageWithURL:url usingProgressViewType:CircularPV orCustomProgressView:nil];`
-- 5. In self (DataSource class) implement method:
+1.  `#import "UIImageView+CircularProgressView.h"`
+2.  `@interface NKVTableCell () <ProgressViewDataSource>`
+3. `[self.bodyImageV nkvSetProgressViewDataSource:self];`
+4. `[self.bodyImageV nkv_setImageWithURL:url usingProgressViewType:CircularPV orCustomProgressView:nil];`
+5. In self (DataSource's class) implement method:
 ```
 - (CircularProgressViewSettings *)setupCircularProgressViewSettings
 {
