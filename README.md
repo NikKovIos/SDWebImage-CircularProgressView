@@ -8,14 +8,14 @@ This is a category to SDWebImage that offer you to implement ProgressView in thr
 - Linear
 - Custom
 
-## • SCREENSHOTS
+## SCREENSHOTS
 
-## • Installation
+## Installation
 [Cocoapods](http://cocoapods.org):
 ```ruby
 pod 'SDWebImage-CircularProgressView'
 ```
-## • Code examples
+## Code examples
 There are two parameters and unique prefix to easier finding. 
 - `progressViewType` - LinearPV or CircularPV. Choose the type of Progress View.
 - `progressView` - If you init your own UIProgressView than put it there. It should be a class or subclass of UIProgressView.
@@ -28,12 +28,28 @@ There are two parameters and unique prefix to easier finding.
 - (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options completed:(SDWebImageCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView;
 - (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView;
 ```
-If you're using the sd_cancelCurrentImageLoad method, you'll also have to call removeProgressView.
+If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call removeProgressView.
 ```
 - (void)prepareForReuse {
     [super prepareForReuse];
     [self.imageView sd_cancelCurrentImageLoad];
     [self.imageView removeProgressView];
+}
+```
+
+**Customize UIProgressView by DataSource methods.**
+- 1. `#import "UIImageView+CircularProgressView.h"`
+- 2. `@interface NKVTableCell () <ProgressViewDataSource>`
+- 3. `[self.bodyImageV nkvSetProgressViewDataSource:self];`
+- 4. `[self.bodyImageV nkv_setImageWithURL:url usingProgressViewType:CircularPV orCustomProgressView:nil];`
+- 5. In self (DataSource class) implement method:
+```
+- (CircularProgressViewSettings *)setupCircularProgressViewSettings
+{
+    CircularProgressViewSettings *circularSettings = [CircularProgressViewSettings new];
+    circularSettings.progressTintColor = [UIColor redColor];
+    circularSettings.thicknessRatio = 0.2;
+    return circularSettings;
 }
 ```
 ###You should know
@@ -47,3 +63,4 @@ Inspired by projects:
 - https://github.com/danielamitay/DACircularProgress
 
 #### TODO:
+- [ ] smth
