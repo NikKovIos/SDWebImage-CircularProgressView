@@ -12,7 +12,7 @@ This is a category to SDWebImage that offer you to implement ProgressView in thr
 
 ## Installation
 [Cocoapods](http://cocoapods.org):
-```ruby
+```
 pod 'SDWebImage-CircularProgressView'
 ```
 ## Code examples
@@ -28,6 +28,7 @@ There are two parameters and unique prefix to easier finding.
 - (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options completed:(SDWebImageCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView;
 - (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView;
 ```
+#### cancelCurrentImageLoad
 If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call removeProgressView.
 ```
 - (void)prepareForReuse {
@@ -37,7 +38,7 @@ If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call
 }
 ```
 
-**Customize UIProgressView by DataSource methods.**
+#### Customize UIProgressView by DataSource methods
 - 1. `#import "UIImageView+CircularProgressView.h"`
 - 2. `@interface NKVTableCell () <ProgressViewDataSource>`
 - 3. `[self.bodyImageV nkvSetProgressViewDataSource:self];`
@@ -52,7 +53,7 @@ If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call
     return circularSettings;
 }
 ```
-###You should know
+##You should know
 - It uses SDWebImage and DACircularProgress.
 - Custom progress bar is a priority for other types. Otherwords if you choose `LinearPV` and then add `orCustomProgressView:(UIProgressView*)yourCustomProgressView` than it would be your custom ProgressView.
 
