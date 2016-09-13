@@ -68,3 +68,5 @@ Inspired by projects:
 
 #### TODO:
 - [ ] Add http://shields.io/
+- [ ] Add UIedgeInsets like property
+- [ ] Think about global property
