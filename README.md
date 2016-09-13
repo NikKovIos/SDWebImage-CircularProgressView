@@ -42,8 +42,8 @@ If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call
 ```
 
 #### Customize UIProgressView by DataSource methods
-1.  `#import "UIImageView+CircularProgressView.h"`
-2.  `@interface NKVTableCell () <ProgressViewDataSource>`
+1. `#import "UIImageView+CircularProgressView.h"`
+2. `@interface NKVTableCell () <ProgressViewDataSource>`
 3. `[self.bodyImageV nkvSetProgressViewDataSource:self];`
 4. `[self.bodyImageV nkv_setImageWithURL:url usingProgressViewType:CircularPV orCustomProgressView:nil];`
 5. In self (DataSource's class) implement method:
@@ -55,6 +55,13 @@ If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call
     circularSettings.thicknessRatio = 0.2;
     return circularSettings;
 }
+```
+####Customize all UIProgressViews in app
+```
+    [DACircularProgressView appearance].trackTintColor = [UIColor lightGrayColor];
+    [DACircularProgressView appearance].progressTintColor = [UIColor blackColor];
+    [UIProgressView appearance].trackTintColor = [UIColor lightGrayColor];
+    [UIProgressView appearance].progressTintColor = [UIColor blackColor];
 ```
 ##You should know
 - It uses SDWebImage and DACircularProgress.
@@ -69,4 +76,3 @@ Inspired by projects:
 #### TODO:
 - [ ] Add http://shields.io/
 - [ ] Add UIedgeInsets like property
-- [ ] Think about global property
