@@ -67,4 +67,4 @@ Inspired by projects:
 - https://github.com/danielamitay/DACircularProgress
 
 #### TODO:
-- [ ] smth
+- [ ] Add http://shields.io/
