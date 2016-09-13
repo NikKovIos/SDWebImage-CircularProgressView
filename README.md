@@ -58,10 +58,10 @@ If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call
 ```
 ####Customize all UIProgressViews in app
 ```
-    [DACircularProgressView appearance].trackTintColor = [UIColor lightGrayColor];
-    [DACircularProgressView appearance].progressTintColor = [UIColor blackColor];
-    [UIProgressView appearance].trackTintColor = [UIColor lightGrayColor];
-    [UIProgressView appearance].progressTintColor = [UIColor blackColor];
+[DACircularProgressView appearance].trackTintColor = [UIColor lightGrayColor];
+[DACircularProgressView appearance].progressTintColor = [UIColor blackColor];
+[UIProgressView appearance].trackTintColor = [UIColor lightGrayColor];
+[UIProgressView appearance].progressTintColor = [UIColor blackColor];
 ```
 ##You should know
 - It uses SDWebImage and DACircularProgress.
