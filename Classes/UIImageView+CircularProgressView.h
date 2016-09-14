@@ -7,8 +7,8 @@
 //
 
 #import "CircularProgressViewSettings.h"
-#import "DACircularProgressView.h"
 #import "LinearProgressViewSettings.h"
+#import <DACircularProgress/DACircularProgressView.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
 

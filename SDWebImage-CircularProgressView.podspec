@@ -9,9 +9,12 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Nik Kov" => "nikkovios@gmail.com" }
-  s.source       = { :git => "https://github.com/NikKovV/SDWebImage-CircularProgressView.git", :tag => s.version.to_s }
+  s.source       = { 
+  :git => "https://github.com/NikKovV/SDWebImage-CircularProgressView.git",
+   :tag => s.version.to_s
+    }
   s.ios.deployment_target = '8.0'
-  s.source_files = '*.{h,m}'
+  s.source_files = 'Classes/*.{h,m}'
   s.requires_arc = true
   s.frameworks = 'UIKit'
   s.dependency 'SDWebImage', '~> 3.7.0'
