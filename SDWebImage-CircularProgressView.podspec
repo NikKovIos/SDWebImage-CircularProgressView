@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes/*.{h,m}'
   s.requires_arc = true
   s.frameworks = 'UIKit'
-  s.dependency 'SDWebImage', '~> 3.7.0'
+  s.dependency 'SDWebImage', '> 3.7.0'
   s.dependency 'DACircularProgress', '~> 2.3'
 end
