@@ -12,6 +12,8 @@ This is a category to SDWebImage that offer you to add ProgressView in three way
 Images are downloaded using SDWebImage (3.7.0 and up)
 
 ## SCREENSHOTS
+![Screenshot_here](https://github.com/NikKovV/SDWebImage-CircularProgressView/blob/master/Screenshots/NKVProgressView.png "Screenshot")
+
 
 ## Installation
 [Cocoapods](http://cocoapods.org):
