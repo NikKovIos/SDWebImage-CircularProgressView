@@ -79,4 +79,5 @@ Inspired by projects:
 #### TODO:
 - [ ] Add http://shields.io/
 - [ ] Add UIedgeInsets like property
+- [ ] Add refresh button to image 
 - [ ] Think about default settings for CircleV
