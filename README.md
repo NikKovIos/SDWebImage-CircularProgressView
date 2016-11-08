@@ -9,7 +9,7 @@ This is a category to SDWebImage that offer you to add ProgressView in three way
 - Linear
 - Custom  
 
-Images are downloaded using SDWebImage (3.7.0 and up)
+Images are downloading by SDWebImage (3.7.0 and up)
 
 ## SCREENSHOTS
 ![Screenshot_here](https://github.com/NikKovV/SDWebImage-CircularProgressView/blob/master/Screenshots/NKVProgressView.png "Screenshot")
