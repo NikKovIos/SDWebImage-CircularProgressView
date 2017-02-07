@@ -1,6 +1,9 @@
 # SDWebImage-CircularProgressView
-###by Nik Kov
-
+![Cocoapods](https://img.shields.io/badge/pod-available-brightgreen.svg?style=flat)
+![Platform](https://img.shields.io/badge/platform-ios-blue.svg?style=flat)
+![Version](https://img.shields.io/badge/version-1.1-blue.svg?style=flat)
+![Objective-C version](https://img.shields.io/badge/Objective--C-latest-lightgrey.svg?style=flat)
+![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)
  
 Good day everybody!)  
 
@@ -81,3 +84,5 @@ Inspired by projects:
 - [ ] Add UIedgeInsets like property
 - [ ] Add refresh button to image 
 - [ ] Think about default settings for CircleV
+
+###by Nik Kov
