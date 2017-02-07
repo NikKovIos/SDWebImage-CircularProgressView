@@ -80,7 +80,8 @@ Inspired by projects:
 - https://github.com/danielamitay/DACircularProgress
 
 #### TODO:
-- [ ] Add http://shields.io/
+- [x] Add http://shields.io/
+- [ ] Add example
 - [ ] Add UIedgeInsets like property
 - [ ] Add refresh button to image 
 - [ ] Think about default settings for CircleV
