@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                         Progress View to see how much left to download an Image. It can be Circular or Apples Linear progress view. You can customize colors and other properties in data source.
                         DESC
   s.homepage     = "https://github.com/NikKovV/SDWebImage-CircularProgressView"
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots  = 'https://github.com/NikKovIos/SDWebImage-CircularProgressView/blob/master/Screenshots/NKVProgressView.png'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Nik Kov" => "nikkovios@gmail.com" }
   s.source       = { 
