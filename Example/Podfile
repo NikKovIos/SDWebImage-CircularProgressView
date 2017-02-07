@@ -1,0 +1,4 @@
+
+target 'Example SDWebIm+CPV' do
+    pod 'SDWebImage-CircularProgressView', :path => '../'
+end

@@ -1,0 +1,24 @@
+PODS:
+  - DACircularProgress (2.3.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage-CircularProgressView (0.1.1):
+    - DACircularProgress (~> 2.3)
+    - SDWebImage (> 3.7.0)
+  - SDWebImage/Core (3.8.2)
+
+DEPENDENCIES:
+  - SDWebImage-CircularProgressView (from `../`)
+
+EXTERNAL SOURCES:
+  SDWebImage-CircularProgressView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SDWebImage-CircularProgressView: d9f944aab3856b0da9b9acfbdce59f717c0233e4
+
+PODFILE CHECKSUM: 685b506ba327e8f1c50be08f900befc257e1f411
+
+COCOAPODS: 1.1.1
