@@ -86,4 +86,8 @@ Inspired by projects:
 - [ ] Add refresh button to image 
 - [ ] Think about default settings for CircleV
 
-###by Nik Kov
+## My other Repos
+
+- [x] https://github.com/NikKovIos/ObjectMapper_RealmSwift - extension to add Realm object support for ObjectMapper
+
+### by Nik Kov
