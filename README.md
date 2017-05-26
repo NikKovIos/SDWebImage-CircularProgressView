@@ -62,14 +62,14 @@ If you're using the `sd_cancelCurrentImageLoad method`, you'll also have to call
     return circularSettings;
 }
 ```
-####Customize all UIProgressViews in app
+#### Customize all UIProgressViews in app
 ```
 [DACircularProgressView appearance].trackTintColor = [UIColor lightGrayColor];
 [DACircularProgressView appearance].progressTintColor = [UIColor blackColor];
 [UIProgressView appearance].trackTintColor = [UIColor lightGrayColor];
 [UIProgressView appearance].progressTintColor = [UIColor blackColor];
 ```
-##You should know
+## You should know
 - It uses SDWebImage and DACircularProgress.
 - CirclePV type implements transparent view by default. Use appearance in AppDelegate or somewhere else to customize it.
 - Custom progress bar is a priority for other types. Otherwords if you choose `LinearPV` and then add `orCustomProgressView:(UIProgressView*)yourCustomProgressView` than it would be your custom ProgressView.
