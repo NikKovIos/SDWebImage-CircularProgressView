@@ -15,6 +15,7 @@ This is a category to SDWebImage that offer you to add ProgressView in three way
 Images are downloading by SDWebImage (3.7.0 and up)
 
 ## SCREENSHOTS
+
 ![Screenshot_here](https://github.com/NikKovV/SDWebImage-CircularProgressView/blob/master/Screenshots/NKVProgressView.png "Screenshot")
 
 
@@ -89,5 +90,6 @@ Inspired by projects:
 ## My other Repos
 
 - [x] https://github.com/NikKovIos/ObjectMapper_RealmSwift - extension to add Realm object support for ObjectMapper
+- [x] https://github.com/NikKovIos/NKVPhonePicker - UITextField subclass picker for country phone codes
 
 ### by Nik Kov
