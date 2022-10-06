@@ -9,6 +9,7 @@
 #import "UIImageView+CircularProgressView.h"
 
 #define TAG_PROGRESS_VIEW 777333777
+typedef SDImageLoaderProgressBlock SDWebImageDownloaderProgressBlock;
 
 @implementation UIImageView (CircularProgressView)
 
@@ -103,7 +104,7 @@ id <ProgressViewDataSource> dataSource;
 
 - (void)updateProgress:(CGFloat)progress
 {
-    UIProgressView *progressView = (UIProgressView *)[self viewWithTag:TAG_PROGRESS_VIEW];
+    DACircularProgressView *progressView = (DACircularProgressView *)[self viewWithTag:TAG_PROGRESS_VIEW];
     if (progressView)
         progressView.progress = progress;
 }
@@ -132,22 +133,22 @@ id <ProgressViewDataSource> dataSource;
     [self nkv_setImageWithURL:url placeholderImage:placeholder options:options progress:nil completed:nil usingProgressViewType:progressViewType orCustomProgressView:progressView];
 }
 
-- (void)nkv_setImageWithURL:(NSURL *)url completed:(SDWebImageCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView
+- (void)nkv_setImageWithURL:(NSURL *)url completed:(SDExternalCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView
 {
     [self nkv_setImageWithURL:url placeholderImage:nil options:0 progress:nil completed:completedBlock usingProgressViewType:progressViewType orCustomProgressView:progressView];
 }
 
-- (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder completed:(SDWebImageCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView
+- (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder completed:(SDExternalCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView
 {
     [self nkv_setImageWithURL:url placeholderImage:placeholder options:0 progress:nil completed:completedBlock usingProgressViewType:progressViewType orCustomProgressView:progressView];
 }
 
-- (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options completed:(SDWebImageCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView
+- (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options completed:(SDExternalCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView
 {
     [self nkv_setImageWithURL:url placeholderImage:placeholder options:options progress:nil completed:completedBlock usingProgressViewType:progressViewType orCustomProgressView:progressView];
 }
 
-- (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView
+- (void)nkv_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDExternalCompletionBlock)completedBlock usingProgressViewType:(ProgressViewType)progressViewType orCustomProgressView:(UIProgressView *)progressView
 {
     if (progressView)
         [self addCustomProgressView:progressView];
@@ -168,7 +169,7 @@ id <ProgressViewDataSource> dataSource;
     }
 
     __weak typeof(self) weakSelf = self;
-    [self sd_setImageWithURL:url placeholderImage:placeholder options:options progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:options progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL *url) {
         
         CGFloat progress = ((CGFloat)receivedSize / (CGFloat)expectedSize);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -176,7 +177,7 @@ id <ProgressViewDataSource> dataSource;
         });
         
         if (progressBlock)
-            progressBlock(receivedSize, expectedSize);
+            progressBlock(receivedSize, expectedSize, url);
     }
      
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
