@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "SDWebImage-CircularProgressView"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Category for UIImageView. Adds circular, linear or custom progress view. Images downloading by SDWebImage."
   s.description      = <<-DESC
                         Progress View to see how much left to download an Image. It can be Circular or Apples Linear progress view. You can customize colors and other properties in data source.
                         DESC
   s.homepage     = "https://github.com/NikKovV/SDWebImage-CircularProgressView"
-  s.screenshots  = 'https://github.com/NikKovIos/SDWebImage-CircularProgressView/blob/master/Screenshots/NKVProgressView.png'
+  s.screenshots  = 'https://raw.githubusercontent.com/NikKovIos/SDWebImage-CircularProgressView/master/Screenshots/NKVProgressView.png'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Nik Kov" => "nikkovios@gmail.com" }
   s.source       = { 
